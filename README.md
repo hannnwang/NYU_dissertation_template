@@ -1,5 +1,5 @@
 # NYU_dissertation_template
-Dissertation template intended for PhD thesis of NYU. Modified by Aman Gupta and Han Wang from the template downloaded at https://github.com/suchow/Dissertate.
+Dissertation template intended for PhD thesis of NYU. Modified by Aman Gupta and Han Wang, strongly based on the template downloaded at https://github.com/suchow/Dissertate.
 
 ## Getting started
 1.Personalize the document by filling out your name and all the other info in documents under `frontmatter/`.
