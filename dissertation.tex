@@ -1,0 +1,93 @@
+%!TEX TS-program = xelatex 
+%!TEX encoding = UTF-8 Unicode
+
+% Modify the following line to match your school
+% Available options include `Harvard`, `Princeton`, and `NYU`.
+\documentclass[School=NYU, 12pt]{Dissertate}
+
+\begin{document}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    %\addtocounter{page}{-2}%
+    \newpage}
+
+% Aman : The default name was ``Listing of figures"
+\renewcommand{\listfigurename}{List of Figures}
+
+
+\setmainfont{Times New Roman}
+% the front matter
+\input{frontmatter/personalize}
+\maketitle
+
+\pagenumbering{roman}
+
+\begin{flushright}
+\vspace{-20pt}
+\rule{2.5in}{.4pt}\\
+Oliver B{\"u}hler
+\end{flushright}
+
+%\setmainfont{Times New Roman}
+
+% begin Aman : 
+\setlength{\parindent}{0pt}
+
+\copyrightpage
+\dedicationpage
+%\poem
+%\afterpage{\blankpage}
+\acknowledgments
+\abstractpage
+\tableofcontents
+%\authorlist
+%\cleardoublepage
+%\addcontentsline{toc}{chapter}{\listtablename}
+%\listoftables
+\cleardoublepage
+\addcontentsline{toc}{chapter}{\listfigurename}
+\listoffigures
+
+
+%\doublespacing
+
+%\usepackage{fontspec}
+%\setmainfont{Arial}
+
+\justify
+%\modulolinenumbers[2]  % to change the module of line numbers. Default 5 
+% end Aman : 
+
+\renewcommand\linenumberfont{\footnotesize}
+% include each chapter...
+%setcounter{chapter}{-1}  % start chapter numbering at 0
+%\begin{linenumbers}
+
+% Han, I am commenting this - so that you can compile this out of the box
+\include{chapters/1_introduction}
+\include{chapters/2_Anisotropic_Helmholtz}
+\include{chapters/3_Ageo}
+%\include{chapters/Conclusion}
+
+%\end{linenumbers}{}
+
+%\begin{appendices}
+%    \include{chapters/appendixA}
+%\end{appendices}
+
+\singlespacing
+
+% the back matter
+\cleardoublepage
+\addcontentsline{toc}{chapter}{References}
+
+\bibliography{references}
+\bibliographystyle{apalike} % amc is another option, but uses numbers
+
+%\bibliographystyle{apalike2} % default
+
+%\include{endmatter/colophon}
+
+\end{document}
